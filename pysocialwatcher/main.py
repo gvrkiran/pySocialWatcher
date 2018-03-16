@@ -7,6 +7,10 @@ from utils import *
 
 class PySocialWatcher:
     @staticmethod
+
+    def load_credentials_direct(token,account_number):
+        PySocialWatcher.add_token_and_account_number(token, account_number)
+
     def load_credentials_file(token_file_path):
         with open(token_file_path, "r") as token_file:
             for line in token_file:
