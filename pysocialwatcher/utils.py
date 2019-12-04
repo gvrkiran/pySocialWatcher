@@ -87,13 +87,14 @@ def send_request(url, params, tryNumber = 0):
 def call_request_fb(row, token, account):
     target_request = row[constants.TARGETING_FIELD]
     payload = {
-        'currency': 'USD',
+#        'currency': 'USD',
         'optimize_for': "NONE",
         'targeting_spec': json.dumps(target_request),
         'access_token': token,
     }
     print_info("\tSending in request: {}".format(payload))
     url = constants.REACHESTIMATE_URL.format(account)
+#    print url
     response = send_request(url, payload)
     return response.content
 

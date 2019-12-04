@@ -55,6 +55,7 @@ class PySocialWatcher:
         }
         response = send_request(constants.GRAPH_SEARCH_URL, request_payload)
         json_response = load_json_data_from_response(response)
+        print json_response;
         interests_dataframe = get_dataframe_from_json_response_query_data(json_response)
         return interests_dataframe
 
