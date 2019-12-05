@@ -130,7 +130,6 @@ class PySocialWatcher:
             print_collecting_progress(dataframe_with_uncompleted_requests, collection_dataframe)
             # Trigger requests
             rows_to_request = dataframe_with_uncompleted_requests.head(len(constants.TOKENS))
-            print "XXXX", rows_to_request
             responses_list = trigger_request_process_and_return_response(rows_to_request)
             # Save response in collection_dataframe
             save_response_in_dataframe(responses_list, collection_dataframe)
